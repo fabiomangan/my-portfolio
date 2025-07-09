@@ -96,9 +96,6 @@ h1 {
   background: rgba(51, 51, 51, 0.9);
 }
 
-.sobre-paragrafo {
-}
-
 .projetos-imagem {
   height: 200px;
   width: 100%;
@@ -134,16 +131,17 @@ h1 {
   transform: translateY(-10px) scale(1);
 }
 
-.info-projetos {
-  margin-bottom: 5px;
+.info-projeto {
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 
 .caixa-texto-projeto {
   padding: 1.5rem;
 }
 
-.paragrafos-projetos {
-  color: rgb(226, 226, 226, 0.8);
+.paragrafo-projetos {
+  color: rgba(226, 226, 226);
   line-height: 1.25rem;
 }
 
