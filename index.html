@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfólio</title>
+  </head>
+  <body>
+    <nav class="navegacao">
+      <ul class="menu">
+        <li>
+          <a href="#inicio" class="menu-link">Início</a>
+        </li>
+        <li>
+          <a href="#sobre" class="menu-link">Sobre</a>
+        </li>
+        <li>
+          <a href="#projetos" class="menu-link">Projetos</a>
+        </li>
+        <li>
+          <a href="#contatos" class="menu-link">Contato</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+      <img src="./img/code.jpeg" alt="skull" class="foto-perfil" />
+      <h1>Fábio Mangan</h1>
+      <p class="cargo">Desenvolvedor Front End</p>
+    </main>
+    <section id="sobre" class="projetos-sobre">
+      <h2 class="sobre-titulo">PERFIL</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">Olá! Estou progredindo na carreira de Tecnologia da Informação, focando em projetos de desenvolvimento Front-End e aprimorando diariamente minhas habilidades de desenvolvimento.</p>
+      </div>
+    </section>
+    <section id="projetos" class="projetos-sobre">
+      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <div class="projetos-caixa">
+        <div class="projetos-card">
+          <img src="./img/movielib.png" alt="MovieLib" class="projetos-imagem" />
+          <div class="caixa-texto-projeto">
+            <h3 class="info-projeto">Best Films Ranking</h3>
+            <p class="paragrafo-projetos">Aplicação web desenvolvida com React que consome a API do The Movie Database (TMDB) para exibir os filmes mais bem avaliados.</p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <img src="./img/conversor.png" alt="Conversor" class="projetos-imagem" />
+          <div class="caixa-texto-projeto">
+            <h3 class="info-projeto">Conversor de Moedas</h3>
+            <p class="paragrafo-projetos">Um conversor de moedas desenvolvido com HTML, CSS e JavaScript, que utiliza a ExchangeRate API para fornecer taxas de câmbio em tempo real</p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <img src="./img/devtradutor.png" alt="DevTradutor" class="projetos-imagem" />
+          <div class="caixa-texto-projeto">
+            <h3 class="info-projeto">Dev Tradutor</h3>
+            <p class="paragrafo-projetos">É uma aplicação web que permite traduzir textos entre diferentes idiomas, oferecendo uma interface simples para seleção de idiomas e inserção de texto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contatos" class="contatos">
+      <h2 class="contatos-titulo">Entre em Contato</h2>
+      <form action="" class="formulario-contato" id="formulario" onsubmit="enviarWpp(event)">
+        <div class="grupo-form">
+          <input type="text" placeholder="Nome" class="campo-form" id="nome" required />
+        </div>
+        <div class="grupo-form">
+          <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="msg" required></textarea>
+        </div>
+        <button type="submit" class="btn-form">Enviar WhatsApp</button>
+      </form>
+    </section>
+
+    <script>
+      function enviarWpp(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const msg = document.getElementById("msg").value;
+
+        const texto = `Olá! Me chamo ${nome}, ${msg}`;
+        const msgFormatada = encodeURIComponent(texto);
+        const tel = "5571985085618";
+
+        const url = `https://wa.me/${tel}?text=${msgFormatada}`;
+
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
